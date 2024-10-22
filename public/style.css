@@ -1,0 +1,121 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #081d579a;
+
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+
+.name-card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: url('https://grangers.co.uk/cdn/shop/articles/engin-akyurt-gJILnne_HFg-unsplash_1920x648.jpg?v=1711643298');
+    background-size: cover;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    transition: transform 0.5s ease;
+}
+
+.name-card:hover {
+    transform: scale(1.1);
+}
+
+.name-card .background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: url('https://grangers.co.uk/cdn/shop/articles/engin-akyurt-gJILnne_HFg-unsplash_1920x648.jpg?v=1711643298');
+    background-size: cover;
+    animation: moveBackground 20s linear infinite;
+    z-index: -1;
+    opacity: 0.4;
+    filter: blur(10px);
+}
+
+@keyframes moveBackground {
+    from {
+        transform: translateX(0) translateY(0);
+    }
+
+    to {
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
+
+.name-card .content {
+    position: relative;
+    z-index: 1;
+}
+
+.name-card .content h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.name-card .content p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+.cover-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/02972eb7-52e6-4274-9a8e-996ae7a573d5/dclme4t-fc225540-9107-4b5e-84a7-1777b2ab85e9.png/v1/fill/w_894,h_894,q_70,strp/welp_that_s_unsettling_by_justasolo_dclme4t-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAwMCIsInBhdGgiOiJcL2ZcLzAyOTcyZWI3LTUyZTYtNDI3NC05YThlLTk5NmFlN2E1NzNkNVwvZGNsbWU0dC1mYzIyNTU0MC05MTA3LTRiNWUtODRhNy0xNzc3YjJhYjg1ZTkucG5nIiwid2lkdGgiOiI8PTEwMDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.ik5Ht9MWk8j7LbzEqth-2Y9ED75-W-WN23xAnu-fiwY') no-repeat center center;
+    background-size: cover;
+    transform: translate(-50%, -50%);
+    animation: coverPage 120s forwards;
+    opacity: 0;
+}
+
+@keyframes coverPage {
+    0% {
+        width: 100vw;
+        height: 100vh;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 50;
+    }
+
+    100% {
+        width: 100vw;
+        height: 100vh;
+        opacity: 1;
+    }
+
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    background: url('https://undergroundsound.eu/wp-content/uploads/2023/12/Source_-webcrawler2k-on-Tumblr.jpg');
+    position: relative;
+    animation: move 5s infinite;
+  }
+  @keyframes move {
+    0% { left: 0; }
+    50% { left: 200px; }
+    100% { left: 0; }
+  }
+
+
+
